@@ -11,20 +11,28 @@ struct RootTabView: View {
                 .tabItem {
                     Label("Paridad", systemImage: "number")
                 }
+            InventoryMenuView()
+                .tabItem {
+                    Label("Inventario", systemImage: "list.number")
+                }
+            AreaMenuView()
+                .tabItem {
+                    Label("Áreas", systemImage: "square.grid.2x2")
+                }
         }
     }
 }
 
 struct WelcomeView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
                     Text("Contextualización")
                         .font(.title2)
                         .bold()
-                    Text("Swift es un lenguaje de programación moderno que brinda mayor seguridad y es intuitivo. Al dominarlo se pueden crear múltiples aplicaciones.")
-                    Text("Esta app incluye un comprobador de números pares o impares. Dirígete a la pestaña 'Paridad' para ingresar un número y obtener la evaluación al instante.")
+                    Text("Swift es un lenguaje de programación moderno que brinda mayor seguridad y es intuitivo.\nAl dominarlo se pueden crear múltiples aplicaciones.")
+                    Text("Esta app te guía a través de tres módulos con lógicas y menús propios: la pestaña 'Paridad' evalúa números pares o impares al instante, 'Inventario' permite registrar artículos y consultar sus existencias, y 'Áreas' calcula superficies geométricas como cuadrado, rectángulo, triángulo y círculo.")
                 }
                 .padding()
             }

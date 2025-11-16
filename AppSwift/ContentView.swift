@@ -11,6 +11,10 @@ struct RootTabView: View {
                 .tabItem {
                     Label("Paridad", systemImage: "number")
                 }
+            InventoryMenuView()
+                .tabItem {
+                    Label("Inventario", systemImage: "list.number")
+                }
         }
     }
 }

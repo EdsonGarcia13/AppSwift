@@ -1,6 +1,9 @@
 // swift-tools-version: 5.9
 import PackageDescription
 
+#if canImport(AppleProductTypes)
+import AppleProductTypes
+
 let package = Package(
     name: "AppSwift",
     platforms: [
@@ -34,8 +37,28 @@ let package = Package(
             path: "Sources/App",
             resources: [
                 .process("Resources"),
-                .process("Preview Content")
+                .process("Preview Content"),
+                .copy("Info.plist")
             ]
         )
     ]
 )
+#else
+let package = Package(
+    name: "AppSwift",
+    products: [
+        .executable(name: "AppSwift", targets: ["App"])
+    ],
+    targets: [
+        .executableTarget(
+            name: "App",
+            path: "Sources/App",
+            resources: [
+                .process("Resources"),
+                .process("Preview Content"),
+                .copy("Info.plist")
+            ]
+        )
+    ]
+)
+#endif

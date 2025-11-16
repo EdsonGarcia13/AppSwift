@@ -13,7 +13,7 @@ struct InventoryMenuView: View {
     @State private var showStockQueryResult = false
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Form {
                 menuSection
 

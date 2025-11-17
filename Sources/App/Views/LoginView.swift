@@ -31,7 +31,7 @@ struct LoginView: View {
                             .autocorrectionDisabled()
                             .textFieldStyle(.roundedBorder)
                     }
-                    
+
                     VStack(alignment: .leading, spacing: 4) {
                         Text("Contraseña")
                             .font(.caption)
@@ -41,6 +41,10 @@ struct LoginView: View {
                             .autocorrectionDisabled()
                             .textFieldStyle(.roundedBorder)
                     }
+
+                    Text("Credenciales de prueba: test123 / test123")
+                        .font(.footnote)
+                        .foregroundColor(.secondary)
                 }
                 .padding(.horizontal)
                 

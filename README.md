@@ -29,7 +29,7 @@ Ahora el proyecto también se distribuye como paquete Swift para que pueda abrir
 ## Ejecución en Xcode
 1. Abre `AppSwift.xcodeproj` en Xcode.
 2. Selecciona un simulador de iOS.
-3. Compila y ejecuta la app (`Cmd + R`).
+3. Compila y ejecuta la app (`Cmd + R`). En compilaciones de **Debug** la sesión inicia autenticada automáticamente para que puedas entrar directo a las pestañas y probar la UI. Si compilas en **Release** o decides cerrar sesión, usa las credenciales de prueba `test123 / test123` en la pantalla de inicio.
 
 ## ¿Cómo previsualizar la app rápidamente?
 Si sólo necesitas ver la interfaz y probar la lógica sin ejecutar todo el simulador, puedes usar los *SwiftUI Previews* integrados en Xcode:
